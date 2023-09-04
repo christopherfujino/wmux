@@ -4,13 +4,14 @@ vars = {
 
 deps = {
     'third_party/clang': {
-      'dep_type': 'cipd',
       'packages': [
         {
-          'package': 'fuchsia/third_party/clang',
+          # TODO make this platform
+          'package': 'fuchsia/third_party/clang/windows-amd64',
           'version': Var('clang_version'),
           },
         ],
+        'dep_type': 'cipd',
       },
     }
 
