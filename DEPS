@@ -7,11 +7,20 @@ deps = {
       'packages': [
         {
           # TODO make this platform
-          'package': 'fuchsia/third_party/clang/windows-amd64',
+          'package': 'fuchsia/third_party/clang/${{platform}}',
           'version': Var('clang_version'),
           },
         ],
-        'dep_type': 'cipd',
+      'dep_type': 'cipd',
+      },
+    'third_party/ninja': {
+      'packages': [
+        {
+          'package': 'infra/3pp/tools/ninja/${{platform}}',
+          'version': 'version:2@1.11.1.chromium.4',
+          }
+        ],
+      'dep_type': 'cipd',
       },
     }
 
